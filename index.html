@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAVLAND TECHNICA NOVOS-WEBEMU</title>
+    <link rel="stylesheet" href="ht_emu.css">
+</head>
+<body>
+    <div>
+        <img src="images/logo.png" alt="Havland Technica Logo" id="logo">
+        <h1><span class="novos">NOVOS</span> Emulator</h1>
+        Emulator version: <span class="special-text">0.2.7</span><br>
+        NOVOS version: <span class="special-text">3.1</span><br>
+        Manual: <span class="special-text"><a href="manual.pdf">Click to download</a></span><br><br><br>
+    </div>
+
+    <div id="novos-container">
+        <div id="novos-terminal">
+            <div id="novos-terminal-output">
+            </div>
+            <input type="text" id="novos-terminal-input" onkeypress="keypress(event)"></input><button id="novos-terminal-button" onclick="gc()">Send</button>
+        </div>
+        <div class="novos-memory-view" id="novos-system-memory">
+            <table>
+                <tr>
+                    <th colspan="8" style="text-align: left;">SYSTEM MEMORY</th>
+                    <th>IP</th>
+                    <td id="IP">0</td>
+                </tr>
+                <tr><th>0</th><td id="0">0</td><th>1</th><td id="1">0</td><th>2</th><td id="2">0</td><th>3</th><td id="3">0</td><th>4</th><td id="4">0</td><th>5</th><td id="5">0</td><th>6</th><td id="6">0</td><th>7</th><td id="7">0</td><th>8</th><td id="8">0</td><th>9</th><td id="9">0</td></tr>
+                <tr><th>10</th><td id="10">0</td><th>11</th><td id="11">0</td><th>12</th><td id="12">0</td><th>13</th><td id="13">0</td><th>14</th><td id="14">0</td><th>15</th><td id="15">0</td><th>16</th><td id="16">0</td><th>17</th><td id="17">0</td><th>18</th><td id="18">0</td><th>19</th><td id="19">0</td></tr>
+                <tr><th>20</th><td id="20">0</td><th>21</th><td id="21">0</td><th>22</th><td id="22">0</td><th>23</th><td id="23">0</td><th>24</th><td id="24">0</td><th>25</th><td id="25">0</td><th>26</th><td id="26">0</td><th>27</th><td id="27">0</td><th>28</th><td id="28">0</td><th>29</th><td id="29">0</td></tr>
+                <tr><th>30</th><td id="30">0</td><th>31</th><td id="31">0</td><th>32</th><td id="32">0</td><th>33</th><td id="33">0</td><th>34</th><td id="34">0</td><th>35</th><td id="35">0</td><th>36</th><td id="36">0</td><th>37</th><td id="37">0</td><th>38</th><td id="38">0</td><th>39</th><td id="39">0</td></tr>
+                <tr><th>40</th><td id="40">0</td><th>41</th><td id="41">0</td><th>42</th><td id="42">0</td><th>43</th><td id="43">0</td><th>44</th><td id="44">0</td><th>45</th><td id="45">0</td><th>46</th><td id="46">0</td><th>47</th><td id="47">0</td><th>48</th><td id="48">0</td><th>49</th><td id="49">0</td></tr>
+                <tr><th>50</th><td id="50">0</td><th>51</th><td id="51">0</td><th>52</th><td id="52">0</td><th>53</th><td id="53">0</td><th>54</th><td id="54">0</td><th>55</th><td id="55">0</td><th>56</th><td id="56">0</td><th>57</th><td id="57">0</td><th>58</th><td id="58">0</td><th>59</th><td id="59">0</td></tr>
+                <tr><th>60</th><td id="60">0</td><th>61</th><td id="61">0</td><th>62</th><td id="62">0</td><th>63</th><td id="63">0</td><th>64</th><td id="64">0</td><th>65</th><td id="65">0</td><th>66</th><td id="66">0</td><th>67</th><td id="67">0</td><th>68</th><td id="68">0</td><th>69</th><td id="69">0</td></tr>
+                <tr><th>70</th><td id="70">0</td><th>71</th><td id="71">0</td><th>72</th><td id="72">0</td><th>73</th><td id="73">0</td><th>74</th><td id="74">0</td><th>75</th><td id="75">0</td><th>76</th><td id="76">0</td><th>77</th><td id="77">0</td><th>78</th><td id="78">0</td><th>79</th><td id="79">0</td></tr>
+                <tr><th>80</th><td id="80">0</td><th>81</th><td id="81">0</td><th>82</th><td id="82">0</td><th>83</th><td id="83">0</td><th>84</th><td id="84">0</td><th>85</th><td id="85">0</td><th>86</th><td id="86">0</td><th>87</th><td id="87">0</td><th>88</th><td id="88">0</td><th>89</th><td id="89">0</td></tr>
+                <tr><th>90</th><td id="90">0</td><th>91</th><td id="91">0</td><th>92</th><td id="92">0</td><th>93</th><td id="93">0</td><th>94</th><td id="94">0</td><th>95</th><td id="95">0</td><th>96</th><td id="96">0</td><th>97</th><td id="97">0</td><th>98</th><td id="98">0</td><th>99</th><td id="99">0</td></tr>
+            </table>
+        </div>
+        <div class="novos-memory-view" id="novos-target-memory">
+            <table>
+                <tr>
+                    <th colspan="8" style="text-align: left;">TARGET MEMORY</th>
+                    <th>IP</th>
+                    <td id="tIP">0</td>
+                </tr>
+                <tr><th>0</th><td id="t0">0</td><th>1</th><td id="t1">0</td><th>2</th><td id="t2">0</td><th>3</th><td id="t3">0</td><th>4</th><td id="t4">0</td><th>5</th><td id="t5">0</td><th>6</th><td id="t6">0</td><th>7</th><td id="t7">0</td><th>8</th><td id="t8">0</td><th>9</th><td id="t9">0</td></tr>
+                <tr><th>10</th><td id="t10">0</td><th>11</th><td id="t11">0</td><th>12</th><td id="t12">0</td><th>13</th><td id="t13">0</td><th>14</th><td id="t14">0</td><th>15</th><td id="t15">0</td><th>16</th><td id="t16">0</td><th>17</th><td id="t17">0</td><th>18</th><td id="t18">0</td><th>19</th><td id="t19">0</td></tr>
+                <tr><th>20</th><td id="t20">0</td><th>21</th><td id="t21">0</td><th>22</th><td id="t22">0</td><th>23</th><td id="t23">0</td><th>24</th><td id="t24">0</td><th>25</th><td id="t25">0</td><th>26</th><td id="t26">0</td><th>27</th><td id="t27">0</td><th>28</th><td id="t28">0</td><th>29</th><td id="t29">0</td></tr>
+                <tr><th>30</th><td id="t30">0</td><th>31</th><td id="t31">0</td><th>32</th><td id="t32">0</td><th>33</th><td id="t33">0</td><th>34</th><td id="t34">0</td><th>35</th><td id="t35">0</td><th>36</th><td id="t36">0</td><th>37</th><td id="t37">0</td><th>38</th><td id="t38">0</td><th>39</th><td id="t39">0</td></tr>
+                <tr><th>40</th><td id="t40">0</td><th>41</th><td id="t41">0</td><th>42</th><td id="t42">0</td><th>43</th><td id="t43">0</td><th>44</th><td id="t44">0</td><th>45</th><td id="t45">0</td><th>46</th><td id="t46">0</td><th>47</th><td id="t47">0</td><th>48</th><td id="t48">0</td><th>49</th><td id="t49">0</td></tr>
+                <tr><th>50</th><td id="t50">0</td><th>51</th><td id="t51">0</td><th>52</th><td id="t52">0</td><th>53</th><td id="t53">0</td><th>54</th><td id="t54">0</td><th>55</th><td id="t55">0</td><th>56</th><td id="t56">0</td><th>57</th><td id="t57">0</td><th>58</th><td id="t58">0</td><th>59</th><td id="t59">0</td></tr>
+                <tr><th>60</th><td id="t60">0</td><th>61</th><td id="t61">0</td><th>62</th><td id="t62">0</td><th>63</th><td id="t63">0</td><th>64</th><td id="t64">0</td><th>65</th><td id="t65">0</td><th>66</th><td id="t66">0</td><th>67</th><td id="t67">0</td><th>68</th><td id="t68">0</td><th>69</th><td id="t69">0</td></tr>
+                <tr><th>70</th><td id="t70">0</td><th>71</th><td id="t71">0</td><th>72</th><td id="t72">0</td><th>73</th><td id="t73">0</td><th>74</th><td id="t74">0</td><th>75</th><td id="t75">0</td><th>76</th><td id="t76">0</td><th>77</th><td id="t77">0</td><th>78</th><td id="t78">0</td><th>79</th><td id="t79">0</td></tr>
+                <tr><th>80</th><td id="t80">0</td><th>81</th><td id="t81">0</td><th>82</th><td id="t82">0</td><th>83</th><td id="t83">0</td><th>84</th><td id="t84">0</td><th>85</th><td id="t85">0</td><th>86</th><td id="t86">0</td><th>87</th><td id="t87">0</td><th>88</th><td id="t88">0</td><th>89</th><td id="t89">0</td></tr>
+                <tr><th>90</th><td id="t90">0</td><th>91</th><td id="t91">0</td><th>92</th><td id="t92">0</td><th>93</th><td id="t93">0</td><th>94</th><td id="t94">0</td><th>95</th><td id="t95">0</td><th>96</th><td id="t96">0</td><th>97</th><td id="t97">0</td><th>98</th><td id="t98">0</td><th>99</th><td id="t99">0</td></tr>
+    
+            </table>
+        </div>
+    </div>
+    
+    <script src="ht_emu.js"></script>
+</body>
+</html>
