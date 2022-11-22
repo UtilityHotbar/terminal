@@ -6,8 +6,8 @@ A web demo can be found [here](https://zhengzi-archive.com/terminal/). Code on t
 
 ## Notes
 * This was originally a part of a larger alternate reality game project, hence the NOVOS branding, copyright 1999 stuff.
-* This version uses publically available google fonts. Hence, there are small differences in cosmetic/css design. No functionality should be different.
+* This version uses publically available google fonts. Hence there are small differences in cosmetic and css design. No functionality should be different.
 
 ## Usage
-1. Clone repository.
+1. Clone repository and do `cd terminal`.
 2. Open `index.html` in browser. (No server should be required)
